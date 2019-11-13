@@ -6,7 +6,7 @@ class CreatePlants < ActiveRecord::Migration[5.2]
       t.string :picture
       t.text :description
       t.integer :price_per_day
-      t.references :user, foreign_key: true
+      t.references :owner, index: true, foreign_key: { to_table: :users }
 
       t.timestamps
     end

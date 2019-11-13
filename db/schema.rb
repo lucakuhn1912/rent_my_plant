@@ -33,11 +33,11 @@ ActiveRecord::Schema.define(version: 2019_11_13_075053) do
     t.string "picture"
     t.text "description"
     t.integer "price_per_day"
-    t.bigint "user_id"
+    t.bigint "owner_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "availability"
-    t.index ["user_id"], name: "index_plants_on_user_id"
+    t.index ["owner_id"], name: "index_plants_on_owner_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -59,5 +59,5 @@ ActiveRecord::Schema.define(version: 2019_11_13_075053) do
 
   add_foreign_key "bookings", "plants"
   add_foreign_key "bookings", "users"
-  add_foreign_key "plants", "users"
+  add_foreign_key "plants", "users", column: "owner_id"
 end

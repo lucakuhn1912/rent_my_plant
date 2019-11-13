@@ -1,2 +1,5 @@
-<h1>Plants#show</h1>
-<p>Find me in app/views/plants/show.html.erb</p>
+<div class="container">
+  <h1><%= @plant.name %></h1>
+  <p><%= @plant.description %></p>
+  <%= link_to "All Plants", plants_path %>
+</div>
