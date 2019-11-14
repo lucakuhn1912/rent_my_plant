@@ -6,7 +6,7 @@
     <% @plants.each do |plant| %>
       <div class="card-trip">
         <%= link_to "", plant_path(plant), class:'plant-card-link' %>
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <%#= cl_image_tag plant.picture, crop: :fill, class:'plant-img' %>
         <div class="card-trip-infos">
           <div>
             <h2><%= plant.name %></h2>
