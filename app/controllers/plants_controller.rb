@@ -12,7 +12,7 @@ class PlantsController < ApplicationController
   end
 
   def create
-    @plant = Plant.create(plant_params)
+    @plant = Plant.new(plant_params)
     @plant.owner = current_user if user_signed_in?
     if @plant.save
       redirect_to plants_path
