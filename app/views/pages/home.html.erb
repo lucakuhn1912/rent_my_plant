@@ -9,6 +9,21 @@
 
 
 
-<%= render "shared/card" %>
+<div class="cards">
+    <% @plants.each do |plant| %>
+      <div class="card-trip">
+        <%= link_to "", plant_path(plant), class:'plant-card-link' %>
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= plant.name %></h2>
+            <p><%= plant.description %></p>
+          </div>
+          <h2 class="card-trip-pricing">£<%= plant.price_per_day %></h2>
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        </div>
+      </div>
+    <% end %>
+  </div>
 
 </div>
