@@ -25,9 +25,16 @@ class PlantsController < ApplicationController
   end
 
   def update
+    if @plant.update
+      redirect_to plant_path(@plant)
+    else
+      render :edit
+    end
   end
 
   def destroy
+    @plant.destroy
+    redirect_to plants_path
   end
 
   private

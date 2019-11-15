@@ -51,7 +51,6 @@ ActiveRecord::Schema.define(version: 2019_11_14_180913) do
   create_table "plants", force: :cascade do |t|
     t.string "name"
     t.string "location"
-    t.string "picture"
     t.text "description"
     t.integer "price_per_day"
     t.bigint "owner_id"

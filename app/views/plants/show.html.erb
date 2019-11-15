@@ -1,5 +1,6 @@
 <div class="container">
   <h1><%= @plant.name %></h1>
   <p><%= @plant.description %></p>
+  <%= image_tag(@plant.picture) %>
   <%= link_to "All Plants", plants_path %>
 </div>
